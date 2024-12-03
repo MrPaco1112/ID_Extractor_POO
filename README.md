@@ -14,53 +14,7 @@ ID Extractor
 
 # Tipografías:
 
-En base a la lista de notificaciones presentes en la clase Notificadora del proyecto, se ha seleccionado una tipografía que cumpla con criterios de claridad, profesionalismo y legibilidad, al mismo tiempo que sea adecuada para reflejar innovación y tecnología. Dado que el objetivo del proyecto es transmitir confianza, eficiencia, accesibilidad y modernidad, se ha optado por la fuente utilizar "Roboto" (sin serifas) para los encabezados. Esta fuente, con su diseño moderno y de fácil lectura, aporta una sensación de profesionalismo y claridad visual.
-
-Para los textos secundarios y descripciones, se ha elegido "Open Sans" y "Lato". Ambas fuentes son altamente accesibles y mantienen una excelente legibilidad, incluso en tamaños pequeños, lo que resulta esencial para asegurar una experiencia de usuario fluida en dispositivos con pantallas de diferentes tamaños. Esta elección garantiza que la interfaz sea funcional y cómoda para los usuarios, sin sacrificar la estética ni la eficiencia.
-
-Profundización de Elección:
-
-Fuente: "Roboto"
-
-Tipo de Fuente:
-"Roboto" es una fuente sans-serif, lo que significa que no tiene serifas (líneas decorativas en los extremos de los caracteres). Este tipo de fuente tiene un diseño moderno, limpio y minimalista, que se adapta bien a interfaces digitales y se destaca por su alta legibilidad en diferentes tamaños.
-
-Características de la Fuente:
-
-Claridad y Legibilidad
-Moderna y Tecnológica
-
-Estilo y Personalidad de la Fuente: 
-
-El estilo de "Roboto" es moderno y profesional, lo que encaja perfectamente con el propósito de la aplicación de Recursos Humanos, que debe transmitir una imagen de seriedad y fiabilidad. La fuente no solo es estéticamente agradable, sino que también es funcional: su forma y espaciado están diseñados para facilitar la lectura, lo cual es esencial cuando se gestionan grandes volúmenes de datos. Esta fuente evoca una sensación de eficiencia y tecnología, valores fundamentales para cualquier aplicación orientada a automatizar procesos y manejar datos con precisión.
-
-Relación con el Proyecto: 
-
-Dado que el proyecto se enfoca en la eficiencia, automatización y precisión en la gestión de datos sensibles, es crucial que la fuente utilizada para las notificaciones y la interfaz sea clara, profesional y fácil de leer, para que los usuarios puedan interactuar con la aplicación de manera fluida y sin confusión.
-Tamaño y Escalabilidad: Dado que el proyecto se ejecutará principalmente en un computador de escritorio y la mayoría del texto estará relacionado con notificaciones, se optará por un tamaño de fuente que garantice legibilidad y fluidez. Para los encabezados, se optó por un tamaño entre 24px y 30px, mientras que para el cuerpo del texto o las notificaciones, un tamaño de 14px a 16px sería adecuado, con la opción de ajustar el tamaño en función de la importancia de cada mensaje.
-
-Uso de "Open Sans" y "Lato" para Textos Secundarios:
-Open Sans:
-Tipo de Fuente: "Open Sans" es también una fuente sans-serif que se caracteriza por su gran legibilidad y diseño moderno, similar a "Roboto", pero con una forma ligeramente más abierta y redondeada.
-Características de la Fuente: 
-Claridad y Legibilidad
-Espaciado Ideal
-
-Estilo y Personalidad de la Fuente:
-
-"Open Sans" transmite neutralidad y amabilidad en su apariencia. Aunque también es moderna, se destaca por una sensación más amigable y accesible, lo que la hace ideal para textos informativos y de apoyo. Su estilo sencillo y efectivo contribuye a un tono de confianza sin ser excesivamente formal.
-
-Lato:
-Tipo de Fuente:
-"Lato" es otra fuente sans-serif, pero tiene una personalidad ligeramente diferente en comparación con "Roboto" y "Open Sans". Sus letras tienen una mayor curvatura en comparación con otras fuentes sans-serif, lo que le da un toque más humanizado.
-
-Características de la Fuente:
-Claridad y Legibilidad
-Versatilidad en Tamaños
-
-Estilo y Personalidad de la Fuente: 
-
-"Lato" transmite una sensación amigable y accesible, lo cual es ideal para textos informativos, ya que su diseño tiene un toque humano que facilita la conexión con los usuarios. Su tono es menos formal que "Roboto", pero igualmente profesional, lo que la convierte en una opción adecuada para descripciones o subtítulos que requieren un tono ligeramente más cálido y cercano.
+![image](https://github.com/user-attachments/assets/49397914-dcea-4861-a2ea-9fd3ed37a054)
 
 
 # Logo:

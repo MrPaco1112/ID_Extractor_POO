@@ -137,27 +137,30 @@ Inicio de la Aplicación
   
 Selección y Carga de Documentos
 
-Mostrar un cuadro de diálogo para que el usuario seleccione múltiples archivos PDF desde su equipo.
-Validar que los archivos seleccionados tengan el formato correcto (extensión .pdf) y almacenar sus rutas para su posterior procesamiento.
-Procesamiento de Datos Biográficos y Biométricos
-Leer el contenido de los documentos PDF seleccionados.
-Extraer información biográfica (nombre, número de cédula, fecha de nacimiento) y biométrica según corresponda.
-Consulta en la Página Web
-Automatizar el llenado de formularios en el sitio web de ADRES(https://www.adres.gov.co/consulte-su-eps#:~:text=De%20igual%20forma%20se%20pueden,.miseguridadsocial.gov.co).
+- Mostrar un cuadro de diálogo para que el usuario seleccione múltiples archivos PDF desde su equipo.
+- Validar que los archivos seleccionados tengan el formato correcto (extensión .pdf) y almacenar sus rutas para su posterior procesamiento.
+- Procesamiento de Datos Biográficos y Biométricos
+- Leer el contenido de los documentos PDF seleccionados.
+- Extraer información biográfica (nombre, número de cédula, fecha de nacimiento) y biométrica según corresponda.
+- Consulta en la Página Web
+- Automatizar el llenado de formularios en el sitio web de ADRES(https://www.adres.gov.co/consulte-su-eps#:~:text=De%20igual%20forma%20se%20pueden,.miseguridadsocial.gov.co).
+
 Pasos principales:
-Navegar al sitio web.
-Completar los campos de tipo de documento y número de cédula.
-Capturar y procesar el CAPTCHA con ayuda de una librería OCR si es necesario.
-Capturar la información resultante (e.g., nombre de la EPS) para su integración.
-Registro de Datos y Generación de Excel
-Guardar los datos procesados en un archivo Excel utilizando la librería Apache POI.
-Generar un archivo nuevo cada vez que se alcancen 100 usuarios procesados, manteniendo un contador para gestionar los lotes.
-Subida a Firebase
-Utilizar el SDK de Firebase para subir los archivos Excel generados a Firebase Storage.
-Registrar la ubicación de los archivos en Firestore o Realtime Database para su seguimiento.
-Reinicio del Proceso
+
+- Navegar al sitio web.
+- Completar los campos de tipo de documento y número de cédula.
+- Capturar y procesar el CAPTCHA con ayuda de una librería OCR si es necesario.
+- Capturar la información resultante (e.g., nombre de la EPS) para su integración.
+- Registro de Datos y Generación de Excel
+- Guardar los datos procesados en un archivo Excel utilizando la librería Apache POI.
+- Subida a Firebase
+- Utilizar el SDK de Firebase para subir los archivos Excel generados a Firebase Storage.
+- Registrar la ubicación de los archivos en Firestore o Realtime Database para su seguimiento.
+- Reinicio del Proceso
+  
 Mostrar al usuario opciones para:
-Procesar más documentos desde el inicio (paso 2).
-Finalizar la aplicación cerrando las ventanas abiertas y liberando recursos.
+
+- Procesar más documentos desde el inicio (paso 2).
+- Finalizar la aplicación cerrando las ventanas abiertas y liberando recursos.
 
 

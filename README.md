@@ -35,7 +35,8 @@ ID Extractor
 
 # Diagrama de clases
 
-![Diagrama de clases](https://github.com/user-attachments/assets/e5065a77-82c3-48fa-b6c9-32fbe0537dbc)
+![Diagrama de clases](https://github.com/user-attachments/assets/b41e97a3-9858-4922-ab74-cad11d03d17d)
+
 
 # Criterios de eleccion
  

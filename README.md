@@ -54,15 +54,12 @@ Criterios de elección:
 
 ¿Para quién va dirigido?
 
-"Nuestro proyecto no tiene un público objetivo definido, pero surge de la experiencia laboral de uno de los integrantes, orientada al manejo de datos relacionados con las EPS. Por su naturaleza, podría beneficiar a sectores como Recursos Humanos, instituciones gubernamentales o cualquier organización que requiera soluciones eficientes para gestionar información personal y biométrica."
+"Nuestro proyecto surge de la experiencia laboral de uno de los integrantes, orientada al manejo de datos relacionados con las EPS. Por su naturaleza, podría beneficiar a sectores como Recursos Humanos, instituciones gubernamentales o cualquier organización que requiera soluciones eficientes para gestionar información personal y biométrica."
 
 ¿Qué se planea transmitir?
 
 Confianza, eficiencia, accesibilidad y tecnología. El diseño debe inspirar seguridad en el manejo de datos sensibles.
 
-¿Qué contexto cultural debe reflejarse en el diseño?
-
-De forma sutil alinearse con la cultura colombiana, incorporando elementos que reflejen el país. Además, debe reflejar modernidad para conectar con el contexto tecnológico.
 
 ¿En qué medios se usará el diseño?
 
@@ -74,7 +71,7 @@ Documentación oficial (manuales, presentaciones, reportes).
 
 Innovación:
 
-"Nuestro proyecto se destaca por su capacidad para transformar un proceso tradicionalmente manual y lento en una solución automatizada, ágil y precisa. Al integrar tecnologías avanzadas como el reconocimiento óptico de caracteres (OCR) y la gestión en la nube mediante Firebase, ofrecemos una herramienta que no solo reduce el tiempo y los recursos necesarios, sino que también incrementa la confiabilidad en el manejo de datos. Esta combinación de tecnologías y su enfoque en la eficiencia y seguridad permite posicionar el proyecto como una solución innovadora en el ámbito de la gestión de información personal y biométrica."
+"Nuestro proyecto se destaca por su capacidad para transformar un proceso tradicionalmente manual y lento en una solución automatizada, ágil y precisa. Al integrar tecnologías avanzadas como el reconocimiento óptico de caracteres (OCR) y la gestión en la nube mediante Firebase o Excel, ofrecemos una herramienta que no solo reduce el tiempo y los recursos necesarios, sino que también incrementa la confiabilidad en el manejo de datos. Esta combinación de tecnologías y su enfoque en la eficiencia y seguridad permite posicionar el proyecto como una solución innovadora en el ámbito de la gestión de información personal y biométrica."
 
 - Eficiencia: Automatización y optimización del manejo de datos.
 
@@ -91,8 +88,8 @@ Colores:
 
 - Azul oscuro: Representa confianza, profesionalismo y tecnología.
 - Blanco: Limpieza y accesibilidad.
-- Toques de amarillo o dorado: Para reflejar innovación y conexión con la cultura colombiana.
-- 
+
+
 Formas:
 - Líneas rectas y geométricas: Sugieren estabilidad y orden.
 - Detalles circulares: Reflejan inclusividad y fluidez.

@@ -105,19 +105,22 @@ Seguridad: Cumplimiento de normativas de protección de datos.
 Accesibilidad: Facilidad de uso para cualquier usuario.
 
 ¿Debe ser atemporal o seguir tendencias actuales?
-El diseño no necesariamente debe seguir tendencias actuales, ya que el enfoque principal del proyecto radica en su funcionalidad y adaptabilidad.
+- El diseño no necesariamente debe seguir tendencias actuales, ya que el enfoque principal del proyecto radica en su funcionalidad y adaptabilidad.
 
 ¿Qué colores y formas representan mejor el mensaje del proyecto?
+
 Colores:
-Azul oscuro: Representa confianza, profesionalismo y tecnología.
-Blanco: Limpieza y accesibilidad.
-Toques de amarillo o dorado: Para reflejar innovación y conexión con la cultura colombiana.
+
+- Azul oscuro: Representa confianza, profesionalismo y tecnología.
+- Blanco: Limpieza y accesibilidad.
+- Toques de amarillo o dorado: Para reflejar innovación y conexión con la cultura colombiana.
+- 
 Formas:
-Líneas rectas y geométricas: Sugieren estabilidad y orden.
-Detalles circulares: Reflejan inclusividad y fluidez.
+- Líneas rectas y geométricas: Sugieren estabilidad y orden.
+- Detalles circulares: Reflejan inclusividad y fluidez.
 
 ¿Qué nivel de detalle debe tener el diseño?
-Sencillo y minimalista, para garantizar claridad en diferentes escalas y contextos (íconos pequeños o banners grandes).
+- Sencillo y minimalista, para garantizar claridad en diferentes escalas y contextos (íconos pequeños o banners grandes).
 
 ¿Cómo puede destacar frente a la competencia?
 - Al reflejar profesionalismo y confianza tecnológica.

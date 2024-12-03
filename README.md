@@ -25,13 +25,23 @@ ID Extractor
 
 # Mock-ups:
 
-![Imagen de WhatsApp 2024-12-03 a las 13 23 09_0de5ffb2](https://github.com/user-attachments/assets/78a555c7-1712-4604-9dc4-2dfd0447fdd4) 
+![image](https://github.com/user-attachments/assets/e9dd40fc-ee85-4032-99a4-cb47474c8a7b)
 
-![Imagen de WhatsApp 2024-12-03 a las 13 23 09_938b7796](https://github.com/user-attachments/assets/0ecf32af-9153-4e75-a1ff-250481ebf84e)
+![image](https://github.com/user-attachments/assets/e5c7060a-1c0f-4182-8e1b-21f74bb16424)
 
-![Imagen de WhatsApp 2024-12-03 a las 13 23 10_d87a2801](https://github.com/user-attachments/assets/37deff9d-64e0-4113-8dda-f9328008b1eb)
+![image](https://github.com/user-attachments/assets/a94fb95f-2dee-4414-a349-a5b727598652)
 
-![Imagen de WhatsApp 2024-12-03 a las 13 23 10_5ef8259e](https://github.com/user-attachments/assets/355bf973-b5ad-4817-bf6c-3aaca039d1be)
+![image](https://github.com/user-attachments/assets/fdf65005-5cb1-4691-9ec6-757def06d389)
+
+![image](https://github.com/user-attachments/assets/1a2ca1c7-85e6-458c-8125-67b664cd499c)
+
+![image](https://github.com/user-attachments/assets/abef5e3e-c460-4f15-b7c2-b2846b1e08b3)
+
+![image](https://github.com/user-attachments/assets/aac31c6d-3162-4149-8cea-d55ef9c63bd1)
+
+![image](https://github.com/user-attachments/assets/bae0ee63-4d97-48a2-ad5d-4c05af9cfdfb)
+
+![image](https://github.com/user-attachments/assets/b3d6fde3-08a7-4fef-8884-cfa71d86334b)
 
 # Diagrama de clases
 

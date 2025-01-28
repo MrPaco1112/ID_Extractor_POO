@@ -15,6 +15,9 @@ public class Persona {
         this.correo = correo;
         this.direccion = direccion;
     }
+    // Constructor vacío necesario para Firebase y deserialización
+    public Persona() {
+    }
 
     // Getters y Setters
     public String getNombre() {

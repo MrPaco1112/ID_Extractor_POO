@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.*;
 
+
 public class IdManager {
     public FirebaseDatabase firebaseDatabase;
     public void initRTD(){ 
@@ -73,7 +74,7 @@ public class IdManager {
                 case 1:
                     try{
                         System.out.println("=== Menu Principal ===");
-                        System.out.println("1. Añadir empleado");
+                        System.out.println("1. Agregar empleado");
                         System.out.println("2. Ver info empleados");
                         System.out.println("3. Actualizar info empleado");
                         System.out.println("4. Eliminar empleados");
@@ -119,60 +120,65 @@ public class IdManager {
                             
                             break;
                         case 3:
-                            nombre = "";
-                            edad = 2;
-                            correo = "";
-                            direccion = "";
-                            
-                            s.nextLine();//Limpia buffer para que lea bien
-                            System.out.println("Ingrese la empresa a la que pertence el empleado: ");
-                            nodo = s.nextLine();
-                            System.out.println("Ingrese el ID del empleado a actualizar: ");
-                            clave = s.nextLine();
                             try{
-                                System.out.println("Que info desea actualizar?");
-                                System.out.println("1. Nombre");
-                                System.out.println("2. Edad");
-                                System.out.println("3. Correo");
-                                System.out.println("4. Direccion");
-                                System.out.print("Elige una opcion: ");
-                                opcion3 = s.nextInt();
+                                s.nextLine();//Limpia buffer para que lea bien
+                                System.out.println("Ingrese la empresa a la que pertence el empleado: ");
+                                nodo = s.nextLine();
+                                System.out.println("Ingrese el ID del empleado a actualizar: ");
+                                clave = s.nextLine();
+                                Persona persona2 = AsistenteFirebase.obtenerInfo(manager.firebaseDatabase, nodo, clave);
+                                String nombre2 = persona2.getNombre();
+                                int edad2 = persona2.getEdad();
+                                String correo2 = persona2.getCorreo();
+                                String direccion2 = persona2.getDireccion();
+                               
+                            
+                                try{
+                                    System.out.println("Que info desea actualizar?");
+                                    System.out.println("1. Nombre");
+                                    System.out.println("2. Edad");
+                                    System.out.println("3. Correo");
+                                    System.out.println("4. Direccion");
+                                    System.out.print("Elige una opcion: ");
+                                    opcion3 = s.nextInt();
                                 
-                            }catch(InputMismatchException e){
-                                System.out.println("Error el valor ingresado no es valido, reintentar");
-                                System.out.println();
-                            break;
-                            }switch(opcion3){
-                                case 1:
-                                    s.nextLine();
-                                    System.out.println("Ingrese actualizacion de nombre: ");
-                                    String nuevoNombre = s.nextLine();
-                                    Persona nuevoNombrePersona = new Persona(nuevoNombre,edad,correo,direccion);
-                                    AsistenteFirebase.actualizarInfo(manager.firebaseDatabase,nodo,clave,nuevoNombrePersona);
-                                    break;
-                                case 2:
-                                    s.nextLine();
-                                    System.out.println("Ingrese actualizacion de edad: ");
-                                    int nuevaEdad = s.nextInt();
-                                    Persona nuevaEdadPersona = new Persona(nombre,nuevaEdad,correo,direccion);
-                                    AsistenteFirebase.actualizarInfo(manager.firebaseDatabase,nodo,clave,nuevaEdadPersona);
-                                    break;
-                                case 3:
-                                    s.nextLine();
-                                    System.out.println("Ingrese actualización de correo: ");
-                                    String nuevoCorreo = s.nextLine();
-                                    Persona nuevoCorreoPersona = new Persona(nombre,edad,nuevoCorreo,direccion);
-                                    AsistenteFirebase.actualizarInfo(manager.firebaseDatabase,nodo,clave,nuevoCorreoPersona);
-                                    break;
-                                case 4:
-                                    s.nextLine();
-                                    System.out.println("Ingrese actualización de direccion: ");
-                                    String nuevaDireccion = s.nextLine();
-                                    Persona nuevaDireccionPersona = new Persona(nombre,edad,correo,nuevaDireccion);
-                                    AsistenteFirebase.actualizarInfo(manager.firebaseDatabase,nodo,clave,nuevaDireccionPersona);
-                                    break;
-                                
-                                        
+                                }catch(InputMismatchException e){
+                                    System.out.println("Error el valor ingresado no es valido, reintentar");
+                                    System.out.println();
+                                break;
+                                }switch(opcion3){
+                                    case 1:
+                                        s.nextLine();
+                                        System.out.println("Ingrese actualizacion de nombre: ");
+                                        String nuevoNombre = s.nextLine();
+                                        Persona nuevoNombrePersona = new Persona(nuevoNombre,edad2,correo2,direccion2);
+                                        AsistenteFirebase.actualizarInfo(manager.firebaseDatabase,nodo,clave,nuevoNombrePersona);
+                                        break;
+                                    case 2:
+                                        s.nextLine();
+                                        System.out.println("Ingrese actualizacion de edad: ");
+                                        int nuevaEdad = s.nextInt();
+                                        Persona nuevaEdadPersona = new Persona(nombre2,nuevaEdad,correo2,direccion2);
+                                        AsistenteFirebase.actualizarInfo(manager.firebaseDatabase,nodo,clave,nuevaEdadPersona);
+                                        break;
+                                    case 3:
+                                        s.nextLine();
+                                        System.out.println("Ingrese actualizacion de correo: ");
+                                        String nuevoCorreo = s.nextLine();
+                                        Persona nuevoCorreoPersona = new Persona(nombre2,edad2,nuevoCorreo,direccion2);
+                                        AsistenteFirebase.actualizarInfo(manager.firebaseDatabase,nodo,clave,nuevoCorreoPersona);
+                                        break;
+                                    case 4:
+                                        s.nextLine();
+                                        System.out.println("Ingrese actualizacion de direccion: ");
+                                        String nuevaDireccion = s.nextLine();
+                                        Persona nuevaDireccionPersona = new Persona(nombre2,edad2,correo2,nuevaDireccion);
+                                        AsistenteFirebase.actualizarInfo(manager.firebaseDatabase,nodo,clave,nuevaDireccionPersona);
+                                        break;     
+                                }
+                            }catch(InterruptedException ex){
+                                System.out.println("Error al obtener informacion: " + ex.getMessage());
+                                break;
                             }
                             
                             break;

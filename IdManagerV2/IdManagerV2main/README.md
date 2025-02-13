@@ -1,2 +1,0 @@
-# practicapoo
-Ejercicios POO

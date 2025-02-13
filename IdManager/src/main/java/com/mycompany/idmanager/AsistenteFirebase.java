@@ -3,18 +3,26 @@
  
 package com.mycompany.idmanager;
 
+import View.VerInfo;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.database.DataSnapshot;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 
 
 public class AsistenteFirebase {
     
+    static HashMap personas = new HashMap<>();
     //private static FirebaseDatabase firebaseDatabase;
     public static void agregarInfo(FirebaseDatabase firebaseDatabase, String nodo, String clave, Persona valor){ //C
         try {
@@ -75,6 +83,29 @@ public class AsistenteFirebase {
         }
     }
     
+    public static HashMap leerDB(FirebaseDatabase firebaseDatabase, String nodo){
+        CountDownLatch latch = new CountDownLatch(1);
+        DatabaseReference referencia = firebaseDatabase.getReference(nodo);
+        System.out.println("Informacion en el nodo: " + referencia.getPath());
+        referencia.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                personas = (HashMap) dataSnapshot.getValue();
+                latch.countDown();
+            }
+            
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                System.out.println("Error al obtener la información: " + databaseError.getMessage());
+            }
+        });
+        try {
+            latch.await();
+        } catch (InterruptedException ex) {
+            Logger.getLogger(AsistenteFirebase.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return personas;
+    }
     public static void actualizarInfo(FirebaseDatabase firebaseDatabase, String nodo, String clave, Persona nuevoValor){ //U
         CountDownLatch latch = new CountDownLatch(1);
         try {
@@ -99,36 +130,8 @@ public class AsistenteFirebase {
         System.out.println("Error al actualizar la informacion: " + e.getMessage());
         }
     }
-    public static void borrarInfo(FirebaseDatabase firebaseDatabase, String nodo, String clave){ //D
-        CountDownLatch latch = new CountDownLatch(1);
-        try {
-            
-            // Obtener referencia al nodo especificado
-            System.out.println("Obteniendo referencia al nodo: " + nodo);
-            DatabaseReference referencia = firebaseDatabase.getReference(nodo);
-
-            // Borrar la información del nodo
-            
-            referencia.child(clave).removeValue(new DatabaseReference.CompletionListener() {
-                @Override
-            public void onComplete(DatabaseError error, DatabaseReference ref) {
-                    if (error != null) {
-                        System.out.println("Error al eliminar la informacion: " + error.getMessage());
-                    } else {
-                        System.out.println("Informacion eliminada correctamente del nodo: " + ref.getPath());
-                    }
-                }
-            });
-            
-            System.out.println("Operacion de escritura completada, esperando confirmacion...");
-        } catch (Exception e) {
-            System.out.println("Error general: " + e.getMessage());
-        }
-        try {
-        latch.await();
-        } catch (InterruptedException ex) {
-        System.out.println("Error al borrar informacion: " + ex.getMessage());
-        }
+    public static void borrarInfo(){ //D
+        
     }
         public static Persona obtenerInfo(FirebaseDatabase firebaseDatabase, String nodo, String clave) throws InterruptedException{ //R
         DatabaseReference referencia = firebaseDatabase.getReference(nodo).child(clave);

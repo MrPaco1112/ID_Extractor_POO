@@ -74,7 +74,7 @@ public class ActualizInfo extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("ID EMPLEADO (Sin '.') :");
+        jLabel3.setText("ID EMPLEADO:");
 
         jLabel4.setText("NOMBRE");
 

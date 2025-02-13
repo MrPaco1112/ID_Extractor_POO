@@ -20,7 +20,7 @@ public class IdManager {
         //C:\\Users\\USUARIO\\OneDrive\\Documentos\\NetBeansProjects\\IdManager\\pacopruebas-165de-firebase-adminsdk-fbsvc-6eb7c97568.json Ruta en el PC de juanes, al final ponen el nombre del archivo 
         try {
             // Ruta al archivo JSON de credenciales
-            String pathToServiceAccount = "C:\\Users\\jgome\\Documents\\NetBeansProjects\\IdManagerV2_PruebaRecursividad\\IdManagerV2main\\IdManager\\pacopruebas-165de-firebase-adminsdk-fbsvc-6eb7c97568.json";
+            String pathToServiceAccount = "D:\\Monica Sarmiento\\Documents\\NetBeansProjects\\IdManagerV2\\ID_Extractor_POO-main\\IdManagerV2\\IdManagerV2main\\IdManager\\pacopruebas-165de-firebase-adminsdk-fbsvc-6eb7c97568.json";
 
             // Construir opciones de Firebase
             FirebaseOptions firebaseOptions = new FirebaseOptions.Builder()

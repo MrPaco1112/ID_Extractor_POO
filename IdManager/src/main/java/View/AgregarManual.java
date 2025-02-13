@@ -12,6 +12,7 @@ public class AgregarManual extends javax.swing.JFrame {
     String nombre;
     String fechaDeNacimiento;
     String cedula;
+    String cedulaGut;
     String correo;
     String direccion;
     String empresa;
@@ -238,6 +239,8 @@ public class AgregarManual extends javax.swing.JFrame {
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         cedula = jTextField4.getText().trim();
         nuevoEmpleado.setId(cedula);
+        cedulaGut = cedula.replace(".", "");
+        clave = cedulaGut;
         
     }//GEN-LAST:event_jTextField4ActionPerformed
 
@@ -249,7 +252,7 @@ public class AgregarManual extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         nombre = jTextField2.getText().trim();
         nuevoEmpleado.setNombre(nombre);
-        clave = nombre;
+        
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

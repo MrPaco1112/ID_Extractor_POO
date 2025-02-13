@@ -2,6 +2,11 @@
 package View;
 import java.awt.*;
 import javax.swing.*;
+
+import com.mycompany.OCRManager;
+import static com.mycompany.OCRManager.extraerDatosCedula;
+import static com.mycompany.OCRManager.leerTextoDesdeImagen;
+
 import com.mycompany.idmanager.*;
 
 public class MenuPrincipal extends javax.swing.JFrame {
@@ -43,9 +48,26 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jButton2.setText("EXTRACTOR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
+
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+            
+                String textoOCR = leerTextoDesdeImagen();
+            
+                if (!textoOCR.startsWith("Error") && !textoOCR.equals("Operación cancelada")) {
+                    OCRManager.DatosCedula datos = extraerDatosCedula(textoOCR);
+                    
+                    System.out.println("=== Datos Extraídos ===");
+                    System.out.println("NUIP: " + datos.getNuip());
+                    System.out.println("Fecha Nacimiento: " + datos.getFechaNacimiento());
+                    System.out.println("Nombre: " + datos.getNombre());
+                    
+                    System.out.println(textoOCR);
+                } else {
+                    System.out.println(textoOCR);
+                }
+            
             }
+            
         });
 
         jButton3.setText("SALIR");

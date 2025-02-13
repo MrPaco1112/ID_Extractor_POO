@@ -189,7 +189,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="ID EMPLEADO:"/>
+        <Property name="text" type="java.lang.String" value="ID EMPLEADO (Sin &apos;.&apos;) :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">

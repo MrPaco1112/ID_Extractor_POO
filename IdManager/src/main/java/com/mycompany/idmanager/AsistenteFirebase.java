@@ -99,8 +99,36 @@ public class AsistenteFirebase {
         System.out.println("Error al actualizar la informacion: " + e.getMessage());
         }
     }
-    public static void borrarInfo(){ //D
-        
+    public static void borrarInfo(FirebaseDatabase firebaseDatabase, String nodo, String clave){ //D
+        CountDownLatch latch = new CountDownLatch(1);
+        try {
+            
+            // Obtener referencia al nodo especificado
+            System.out.println("Obteniendo referencia al nodo: " + nodo);
+            DatabaseReference referencia = firebaseDatabase.getReference(nodo);
+
+            // Borrar la información del nodo
+            
+            referencia.child(clave).removeValue(new DatabaseReference.CompletionListener() {
+                @Override
+            public void onComplete(DatabaseError error, DatabaseReference ref) {
+                    if (error != null) {
+                        System.out.println("Error al eliminar la informacion: " + error.getMessage());
+                    } else {
+                        System.out.println("Informacion eliminada correctamente del nodo: " + ref.getPath());
+                    }
+                }
+            });
+            
+            System.out.println("Operacion de escritura completada, esperando confirmacion...");
+        } catch (Exception e) {
+            System.out.println("Error general: " + e.getMessage());
+        }
+        try {
+        latch.await();
+        } catch (InterruptedException ex) {
+        System.out.println("Error al borrar informacion: " + ex.getMessage());
+        }
     }
         public static Persona obtenerInfo(FirebaseDatabase firebaseDatabase, String nodo, String clave) throws InterruptedException{ //R
         DatabaseReference referencia = firebaseDatabase.getReference(nodo).child(clave);

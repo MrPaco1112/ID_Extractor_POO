@@ -75,7 +75,8 @@ public class OCRManager {
             // Buscar NUIP
             Matcher matcherNUIP = patronNUIP.matcher(linea);
             if (matcherNUIP.find()) {
-                nuip = matcherNUIP.group(1).trim();
+                nuipPuntos = matcherNUIP.group(1).trim();
+                nuip = nuipPuntos.replace(".", ""); // Eliminar puntos
             }
 
             // Buscar Fecha de Nacimiento

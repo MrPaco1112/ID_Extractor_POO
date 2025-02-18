@@ -48,7 +48,7 @@ public class OCRManager {
         
         // 2. Configurar Tesseract
         Tesseract tesseract = new Tesseract();
-        tesseract.setDatapath("C:/Program Files/Tesseract-OCR/tessdata"); // Ruta de los archivos .traineddata
+        tesseract.setDatapath("D:\\Monica Sarmiento\\Documents\\NetBeansProjects\\lol\\IdManager\\src\\resources"); // Ruta de los archivos .traineddata
         tesseract.setLanguage("spa"); // Idioma (spa = español)
         
         try {

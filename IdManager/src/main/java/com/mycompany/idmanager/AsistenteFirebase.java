@@ -8,14 +8,40 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.database.DataSnapshot;
+import java.util.HashMap;
 import java.util.concurrent.CountDownLatch;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 
 
 public class AsistenteFirebase {
     
-    //private static FirebaseDatabase firebaseDatabase;
+    static HashMap personas = new HashMap<>();
+    public static HashMap leerDB(FirebaseDatabase firebaseDatabase, String nodo){
+        CountDownLatch latch = new CountDownLatch(1);
+        DatabaseReference referencia = firebaseDatabase.getReference(nodo);
+        System.out.println("Informacion en el nodo: " + referencia.getPath());
+        referencia.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                personas = (HashMap) dataSnapshot.getValue();
+                latch.countDown();
+            }
+            
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                System.out.println("Error al obtener la información: " + databaseError.getMessage());
+            }
+        });
+        try {
+            latch.await();
+        } catch (InterruptedException ex) {
+            Logger.getLogger(AsistenteFirebase.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return personas;
+    }
     public static void agregarInfo(FirebaseDatabase firebaseDatabase, String nodo, String clave, Persona valor){ //C
         try {
             
@@ -117,6 +143,7 @@ public class AsistenteFirebase {
                     } else {
                         System.out.println("Informacion eliminada correctamente del nodo: " + ref.getPath());
                     }
+                    latch.countDown();
                 }
             });
             

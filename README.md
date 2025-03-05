@@ -7,6 +7,7 @@ INDICE
 - Paso a Paso instalacion
 - Flujo general
 - Apariencia final
+- Funcionamiento de OCR
 
 
 
@@ -236,7 +237,7 @@ Pasos del Código (Alto Nivel Abstracto)
 ## Ventana del resultado del escaner
 ![image](https://github.com/user-attachments/assets/4a73818c-83e0-4e66-be0a-078a0d2e2b83)
 
-# Proceso de extraccion de texto
+# Funcionamiento de OCR
 
 ### Se inicia con la imagen (jpg o png) de una cedula en pantalla completa o en fondo blanco
 Se realizo de esta manera ya que el caso de uso es para oficinas de recursos humanos a donde llegan las hojas de vida del personal, generalmente una cedula en una hoja blanca tamaño carta.

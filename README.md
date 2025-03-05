@@ -12,9 +12,10 @@ INDICE
 
 
 ![image](https://github.com/user-attachments/assets/eeb6c74c-0973-4c45-bed9-9053b46655bf)
----
 
-# Diseño  
+
+# Diseño 
+
 ## Paleta de colores:
 
 ![image](https://github.com/user-attachments/assets/68b15120-b4e8-4ecc-bc37-45e7ed56404d)
@@ -22,22 +23,24 @@ INDICE
 ![image](https://github.com/user-attachments/assets/1db6192b-d2be-4f89-95bc-c304020223ca)
 
 ## Tipografías:
-
+---
 ![image](https://github.com/user-attachments/assets/49397914-dcea-4861-a2ea-9fd3ed37a054)
 
 
 ## Logo:
-
+---
 ![image](https://github.com/user-attachments/assets/80c8eb78-da6e-4ade-ad4e-681833533df7)
 
 ![image](https://github.com/user-attachments/assets/7bba7481-624e-4644-bd34-6e31af69e937)
 
 ### Color logo
+---
 Se modificaron los colores iniciales para hacerlo mas llamativo
 ![image](https://github.com/user-attachments/assets/7cac42e9-3703-4add-9f8d-0d5b93e272c2)
 ![image](https://github.com/user-attachments/assets/b472c875-a1fc-47b9-a37d-a653c03e20fb)
 
 ### Test logo 
+---
 Se testearon distintos logos con el fin de tener el mayor contraste en tema oscuro y claro
 ![image](https://github.com/user-attachments/assets/2b4a3250-510b-4217-a16a-e000c23a4bc5)
 ![image](https://github.com/user-attachments/assets/e09421d6-dd89-44d8-87d7-2fc31682a10e)
@@ -180,7 +183,7 @@ Ejecutar el proyecto desde NetBeans utilizando el botón de ejecución (triángu
 
 Pasos del Código (Alto Nivel Abstracto)
 
-## nicio de la Aplicación
+## Inicio de la Aplicación
 
 - La aplicación se inicia al hacer clic en un ícono en el escritorio o ejecutando un archivo .jar generado desde NetBeans.
 - Se muestra una pantalla de inicio con el logo, slogan y un botón para comenzar el proceso.

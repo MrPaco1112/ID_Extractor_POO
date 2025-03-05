@@ -2,6 +2,47 @@
 
 # Proyecto POO 2024
 
+Paso a Paso instalacion:
+
+https://drive.google.com/drive/folders/1nmum3sRmDNa3wkcc8pE1dRI-mNJXz1uN?usp=sharing
+
+1. Descarga del Proyecto
+Descargar el archivo ZIP del proyecto desde NetBeans.
+
+Descomprimir el archivo y ubicar la carpeta en una ubicación de preferencia.
+
+2. Descarga del Instalador de Tesseract
+Descargar el instalador de Tesseract desde Google Drive.
+
+3. Instalación de Tesseract
+
+Ejecutar el instalador y seguir el proceso de instalación estándar.
+
+Importante: Tomar nota de la ubicación donde se guardará el ejecutable de Tesseract.
+
+4. Configuración del Archivo OCR.py
+Abrir la consola de comandos y ejecutar el siguiente comando para instalar las dependencias necesarias: pip install opencv-python numpy pillow pytesseract
+
+Acceder a la siguiente ruta del proyecto: IdManager/src/main/main/resources/
+
+Abrir el archivo OCR.py con IDLE o un editor de código.
+
+Debajo de las importaciones, añadir la siguiente línea de código, reemplazando con la ruta correcta del ejecutable de Tesseract: pytesseract.pytesseract.tesseract_cmd = r'C:\Camino\de\ejemplo\Tesseract-OCR\tesseract.exe'
+
+Con esta configuración, la funcionalidad OCR debería operar correctamente.
+
+5. Instalación y Configuración de JSON
+Descargar los archivos JSON desde Google Drive.
+
+Mover los archivos JSON a la siguiente ruta del proyecto: IdManager/src/main/main/resources/
+
+Con esta configuración, la inicialización de Firebase y el funcionamiento del programa deberían completarse correctamente.
+
+6. Ejecución desde NetBeans
+Abrir NetBeans y cargar la carpeta del proyecto desde el explorador de archivos.
+
+Ejecutar el proyecto desde NetBeans utilizando el botón de ejecución (triángulo en la parte superior) o presionando F6.
+
 ID Extractor
 
 - Automatiza y simplifica

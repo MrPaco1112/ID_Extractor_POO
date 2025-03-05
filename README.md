@@ -135,7 +135,7 @@ Formas:
 ---
 ---
 
-# Paso a Paso instalacion
+# Paso a Paso instalación
 
 https://drive.google.com/drive/folders/1nmum3sRmDNa3wkcc8pE1dRI-mNJXz1uN?usp=sharing
 

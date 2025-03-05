@@ -1,4 +1,17 @@
 # ID Manager
+
+INDICE
+
+# Diseño  
+# Diagrama de clases
+# Criterios de eleccion
+# Paso a Paso instalacion
+# Flujo general
+
+
+
+
+
 ![image](https://github.com/user-attachments/assets/eeb6c74c-0973-4c45-bed9-9053b46655bf)
 
 
@@ -111,7 +124,7 @@ Formas:
 - Al reflejar profesionalismo y confianza tecnológica.
 - Usando un diseño único que combina elementos nacionales con un estilo moderno.
 
-# Paso a Paso instalacion:
+# Paso a Paso instalacion
 
 https://drive.google.com/drive/folders/1nmum3sRmDNa3wkcc8pE1dRI-mNJXz1uN?usp=sharing
 

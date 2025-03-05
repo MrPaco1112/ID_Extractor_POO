@@ -1,19 +1,18 @@
 # ID Manager
 
 INDICE
-
-# Diseño  
-# Diagrama de clases
-# Criterios de eleccion
-# Paso a Paso instalacion
-# Flujo general
-
+- Diseño  
+- Diagrama de clases
+- Criterios de eleccion
+- Paso a Paso instalacion
+- Flujo general
+- Apariencia final
 
 
 
 
 ![image](https://github.com/user-attachments/assets/eeb6c74c-0973-4c45-bed9-9053b46655bf)
-
+---
 
 # Diseño  
 ## Paleta de colores:
@@ -39,7 +38,7 @@ Se modificaron los colores iniciales para hacerlo mas llamativo
 ![image](https://github.com/user-attachments/assets/b472c875-a1fc-47b9-a37d-a653c03e20fb)
 
 ### Test logo 
-Se tertearon distintos logos con el fin de tener el mayor contraste en tema oscuro y claro
+Se testearon distintos logos con el fin de tener el mayor contraste en tema oscuro y claro
 ![image](https://github.com/user-attachments/assets/2b4a3250-510b-4217-a16a-e000c23a4bc5)
 ![image](https://github.com/user-attachments/assets/e09421d6-dd89-44d8-87d7-2fc31682a10e)
 
@@ -65,12 +64,13 @@ Se tertearon distintos logos con el fin de tener el mayor contraste en tema oscu
 ![image](https://github.com/user-attachments/assets/bae0ee63-4d97-48a2-ad5d-4c05af9cfdfb)
 
 ![image](https://github.com/user-attachments/assets/b3d6fde3-08a7-4fef-8884-cfa71d86334b)
-
+---
+---
 # Diagrama de clases
 
 ![Diagrama de clases (1)](https://github.com/user-attachments/assets/89396852-b111-4f92-ab93-1c839ed69f48)
-
-
+---
+---
 # Criterios de eleccion
  
 Criterios de elección del proyecto:
@@ -124,6 +124,8 @@ Formas:
 - Al reflejar profesionalismo y confianza tecnológica.
 - Usando un diseño único que combina elementos nacionales con un estilo moderno.
 
+---
+---
 # Paso a Paso instalacion
 
 https://drive.google.com/drive/folders/1nmum3sRmDNa3wkcc8pE1dRI-mNJXz1uN?usp=sharing
@@ -166,6 +168,9 @@ Abrir NetBeans y cargar la carpeta del proyecto desde el explorador de archivos.
 
 Ejecutar el proyecto desde NetBeans utilizando el botón de ejecución (triángulo en la parte superior) o presionando F6.
 
+---
+---
+
 # Flujo general
 
 Pasos del Código (Alto Nivel Abstracto)
@@ -202,5 +207,30 @@ Pasos del Código (Alto Nivel Abstracto)
 
 - Procesar más documentos desde el inicio (paso 2).
 - Finalizar la aplicación cerrando las ventanas abiertas y liberando recursos.
+
+---
+---
+
+# Apariencia final
+
+## Ventana login
+![image](https://github.com/user-attachments/assets/a42f788e-3e00-48d7-b9ba-e1f7e8e8c473)
+
+## Selector de Directorio local
+![image](https://github.com/user-attachments/assets/ca27dabf-96b3-4210-adbb-b8dcc9ee7a2c)
+
+## Ventana principal, Vista de bienvenida
+![image](https://github.com/user-attachments/assets/ab2b4c36-4f80-4b0a-9022-30e01b8c264b)
+
+## Ventana principal, Vista de Empresa Seleccionada "UNAL"
+![image](https://github.com/user-attachments/assets/1e08a0d0-3273-4b25-a977-66bf1abf814c)
+
+## Ventana del resultado del escaner
+![image](https://github.com/user-attachments/assets/710c8aa4-bf1c-48d7-8868-f2de566750a9)
+
+
+
+
+
 
 

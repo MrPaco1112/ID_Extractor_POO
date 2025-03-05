@@ -1,29 +1,39 @@
-# ID_Extractor_POO
+# ID Manager
+![image](https://github.com/user-attachments/assets/eeb6c74c-0973-4c45-bed9-9053b46655bf)
+Automatiza y simplifica
 
-# Proyecto POO 2024
-
-ID Extractor
-
-- Automatiza y simplifica
-  
-# Paleta de colores:
+# Diseño  
+## Paleta de colores:
 
 ![image](https://github.com/user-attachments/assets/68b15120-b4e8-4ecc-bc37-45e7ed56404d)
 
 ![image](https://github.com/user-attachments/assets/1db6192b-d2be-4f89-95bc-c304020223ca)
 
-# Tipografías:
+## Tipografías:
 
 ![image](https://github.com/user-attachments/assets/49397914-dcea-4861-a2ea-9fd3ed37a054)
 
 
-# Logo:
+## Logo:
 
 ![image](https://github.com/user-attachments/assets/80c8eb78-da6e-4ade-ad4e-681833533df7)
 
 ![image](https://github.com/user-attachments/assets/7bba7481-624e-4644-bd34-6e31af69e937)
 
-# Mock-ups:
+### Color logo
+Se modificaron los colores iniciales para hacerlo mas llamativo
+![image](https://github.com/user-attachments/assets/7cac42e9-3703-4add-9f8d-0d5b93e272c2)
+![image](https://github.com/user-attachments/assets/b472c875-a1fc-47b9-a37d-a653c03e20fb)
+
+### Test logo 
+Se tertearon distintos logos con el fin de tener el mayor contraste en tema oscuro y claro
+![image](https://github.com/user-attachments/assets/2b4a3250-510b-4217-a16a-e000c23a4bc5)
+![image](https://github.com/user-attachments/assets/e09421d6-dd89-44d8-87d7-2fc31682a10e)
+
+
+
+
+## Mock-ups:
 
 ![image](https://github.com/user-attachments/assets/e9dd40fc-ee85-4032-99a4-cb47474c8a7b)
 
@@ -50,7 +60,7 @@ ID Extractor
 
 # Criterios de eleccion
  
-Criterios de elección:
+Criterios de elección del proyecto:
 
 ¿Para quién va dirigido?
 
@@ -105,22 +115,22 @@ Formas:
 
 https://drive.google.com/drive/folders/1nmum3sRmDNa3wkcc8pE1dRI-mNJXz1uN?usp=sharing
 
-1. Descarga del Proyecto
+## 1. Descarga del Proyecto
 Descargar el archivo ZIP del proyecto desde NetBeans.
 
 Descomprimir el archivo y ubicar la carpeta en una ubicación de preferencia.
 
-2. Descarga del Instalador de Tesseract
+## 2. Descarga del Instalador de Tesseract
 
 Descargar el instalador de Tesseract desde Google Drive.
 
-3. Instalación de Tesseract
+## 3. Instalación de Tesseract
 
 Ejecutar el instalador y seguir el proceso de instalación estándar.
 
 Importante: Tomar nota de la ubicación donde se guardará el ejecutable de Tesseract.
 
-4. Configuración del Archivo OCR.py
+## 4. Configuración del Archivo OCR.py
 Abrir la consola de comandos y ejecutar el siguiente comando para instalar las dependencias necesarias: pip install opencv-python numpy pillow pytesseract
 
 Acceder a la siguiente ruta del proyecto: IdManager/src/main/main/resources/
@@ -131,14 +141,14 @@ Debajo de las importaciones, añadir la siguiente línea de código, reemplazand
 
 Con esta configuración, la funcionalidad OCR debería operar correctamente.
 
-5. Instalación y Configuración de JSON
+## 5. Instalación y Configuración de JSON
 Descargar los archivos JSON desde Google Drive.
 
 Mover los archivos JSON a la siguiente ruta del proyecto: IdManager/src/main/main/resources/
 
 Con esta configuración, la inicialización de Firebase y el funcionamiento del programa deberían completarse correctamente.
 
-6. Ejecución desde NetBeans
+## 6. Ejecución desde NetBeans
 Abrir NetBeans y cargar la carpeta del proyecto desde el explorador de archivos.
 
 Ejecutar el proyecto desde NetBeans utilizando el botón de ejecución (triángulo en la parte superior) o presionando F6.
@@ -147,12 +157,12 @@ Ejecutar el proyecto desde NetBeans utilizando el botón de ejecución (triángu
 
 Pasos del Código (Alto Nivel Abstracto)
 
-Inicio de la Aplicación
+## nicio de la Aplicación
 
 - La aplicación se inicia al hacer clic en un ícono en el escritorio o ejecutando un archivo .jar generado desde NetBeans.
 - Se muestra una pantalla de inicio con el logo, slogan y un botón para comenzar el proceso.
   
-Selección y Carga de Documentos
+## Selección y Carga de Documentos
 
 - Mostrar un cuadro de diálogo para que el usuario seleccione múltiples archivos PDF desde su equipo.
 - Validar que los archivos seleccionados tengan el formato correcto (extensión .pdf) y almacenar sus rutas para su posterior procesamiento.
@@ -162,7 +172,7 @@ Selección y Carga de Documentos
 - Consulta en la Página Web
 - Automatizar el llenado de formularios en el sitio web de ADRES(https://www.adres.gov.co/consulte-su-eps#:~:text=De%20igual%20forma%20se%20pueden,.miseguridadsocial.gov.co).
 
-Pasos principales:
+## Pasos principales:
 
 - Navegar al sitio web.
 - Completar los campos de tipo de documento y número de cédula.
@@ -175,7 +185,7 @@ Pasos principales:
 - Registrar la ubicación de los archivos en Firestore o Realtime Database para su seguimiento.
 - Reinicio del Proceso
   
-Mostrar al usuario opciones para:
+## Mostrar al usuario opciones para:
 
 - Procesar más documentos desde el inicio (paso 2).
 - Finalizar la aplicación cerrando las ventanas abiertas y liberando recursos.

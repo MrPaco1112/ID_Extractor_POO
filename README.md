@@ -234,7 +234,35 @@ Pasos del Código (Alto Nivel Abstracto)
 ![image](https://github.com/user-attachments/assets/1e08a0d0-3273-4b25-a977-66bf1abf814c)
 
 ## Ventana del resultado del escaner
-![image](https://github.com/user-attachments/assets/710c8aa4-bf1c-48d7-8868-f2de566750a9)
+![image](https://github.com/user-attachments/assets/4a73818c-83e0-4e66-be0a-078a0d2e2b83)
+
+# Proceso de extraccion de texto
+
+### Se inicia con la imagen (jpg o png) de una cedula en pantalla completa o en fondo blanco
+Se realizo de esta manera ya que el caso de uso es para oficinas de recursos humanos a donde llegan las hojas de vida del personal, generalmente una cedula en una hoja blanca tamaño carta.
+![1 ccFondoBlanco](https://github.com/user-attachments/assets/f83fd873-9ea8-4c73-94a7-82d5cdae2084)
+
+### Se eliminan todos los pixeles blancos de la imagen
+![2 ccSinBlanco](https://github.com/user-attachments/assets/69127960-9d21-42e4-83fb-7b55204e6d1e)
+
+### Se recorta la imagen quedando en pantalla completa
+![3 ccPantallaCompleta](https://github.com/user-attachments/assets/ce9a72eb-0161-4dde-afb4-2d378c7ab8bc)
+
+### Se recorta nuevamente en una proporcion especifica
+![4 ccRecortada](https://github.com/user-attachments/assets/d87c4c46-45f2-49c8-bc21-99e4c99823dc)
+
+### Se pasa a escala de grises y se convierten a blanco un rango determinado de grises
+![5 ccBlancoyNegro](https://github.com/user-attachments/assets/d78ceff1-198c-4376-8ba4-e574b8b58b05)
+
+### Finalmente se recorta cada espacio con los datos que se desean extraer
+Dado que todas las cedulas tienen la misma proporción, estos datos siempre estaran ubicados en el mismo lugar
+
+![ccID](https://github.com/user-attachments/assets/6213247a-50c6-4d0a-989e-d8b45895d87d)
+![ccNombre](https://github.com/user-attachments/assets/299c9324-87a9-409f-ae5c-7c745d353389)
+![ccApellido](https://github.com/user-attachments/assets/a5a26532-bb17-44a4-ae20-4c6a44b39369)
+![ccFechaNacimiento](https://github.com/user-attachments/assets/828c3180-35ef-4123-98df-e28a27c9db0f)
+
+
 
 
 

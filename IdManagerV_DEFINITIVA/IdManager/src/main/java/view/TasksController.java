@@ -15,9 +15,11 @@ public class TasksController {
     public void initialize() {
         // Datos de ejemplo
         pendingTasksList.getItems().addAll("Intrucciones:", 
-                "El boton crear te permite crear empresas, para ver sus datos asociados haz doble click en su nombre",
-                "Para volver a esta vista haz doble click en ID MANAGER",
-                "Para editar informacion de empleados haz doble click en la casilla a editar");
+                "El boton crear te permite crear empresas, para ver sus datos asociados haz doble click en el nombre de la empresa",
+                "Para volver a la vista actual haz click en ID MANAGER",
+                "Al crear una nueva empresa presiona el boton actualizar y dirigente a esta vista",
+                "Para editar informacion de empleados haz doble click en la casilla a editar, al finalizar de editar presiona enter");
+
         
     }
 }

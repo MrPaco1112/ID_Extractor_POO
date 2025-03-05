@@ -1,6 +1,5 @@
 package com.mycompany.idmanager;
 
-import java.util.ArrayList;
 import javafx.application.Application;
 import view.IdManagerApp;
 
@@ -18,3 +17,4 @@ public class IdManager {
         
     }  
 }
+

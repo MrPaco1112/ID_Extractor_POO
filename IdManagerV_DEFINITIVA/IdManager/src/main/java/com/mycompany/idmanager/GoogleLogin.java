@@ -19,24 +19,24 @@ import java.util.List;
 public class GoogleLogin {
     private static final String APPLICATION_NAME = "idManager";
     private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
-    // Directorio para almacenar las credenciales del usuario
+    
+    // Se crea una carpeta para almacenar las credenciales del usuario
     private static final java.io.File CREDENTIALS_FOLDER = new java.io.File(System.getProperty("user.home"), "credentials");
 
-    // Alcances requeridos; en este ejemplo se solicita acceso al email del usuario
+    // Se solicita acceso al email del usuario
     private static final List<String> SCOPES = Collections.singletonList("https://www.googleapis.com/auth/userinfo.email");
 
-    // Nombre del archivo de credenciales (descargado desde la consola de Google)
     private static final String CLIENT_SECRET_FILE_NAME = "/logingoogle-service.json";
 
     public static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT) throws IOException {
-        // Cargar el archivo de credenciales
+        // Se carga  el archivo de credenciales
         InputStream in = GoogleLogin.class.getResourceAsStream(CLIENT_SECRET_FILE_NAME);
         if (in == null) {
             throw new IOException("No se encontró el archivo " + CLIENT_SECRET_FILE_NAME);
         }
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(in));
 
-        // Construir el flujo de autorización
+        // Se inicializa el flujo de autorización de google
         GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(
                 HTTP_TRANSPORT, JSON_FACTORY, clientSecrets, SCOPES)
                 .setDataStoreFactory(new FileDataStoreFactory(CREDENTIALS_FOLDER))
@@ -45,10 +45,10 @@ public class GoogleLogin {
         
         System.out.println("Se ha iniciado sesion CORRECTAMENTE.");
 
-        // Configurar un receptor local para recibir el código de autorización
+        // Se configura el puerto local para recibir el código de autorización
         LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8888).build();
 
-        // Inicia el proceso de autorización (esto abrirá una ventana del navegador)
+        // Se abre una ventana en el navegador para que el usuario se identifique
         return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
         
     }

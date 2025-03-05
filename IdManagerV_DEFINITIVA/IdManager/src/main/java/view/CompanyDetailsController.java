@@ -76,14 +76,14 @@ public class CompanyDetailsController {
         @FXML
     private void handleEscanear(ActionEvent event) throws InterruptedException {
 
-         // 1. Llamar a OCRManager para abrir JFileChooser y procesar la imagen
+         // Se llama a OCRManager para abrir JFileChooser y procesar la imagen
         String texto = OCRManager.leerTextoDesdeImagen();
         System.out.println("Texto OCR: " + texto);
 
-        // 2. (Opcional) extraer datos específicos de la cédula
+        // Extraer datos de la cédula
         OCRManager.DatosCedula datos = OCRManager.extraerDatosCedula(texto);
         File foto = OCRManager.getFoto();
-        // 3. Mostrar el resultado en la consola o en un cuadro de diálogo
+        // Mostrar el resultado en un cuadro de diálogo
         String mensaje = "Texto OCR:\n" + texto
                 + "\n\nNUIP: " + datos.getNuip()
                 + "\nFecha Nac.: " + datos.getFechaNacimiento()
@@ -93,9 +93,13 @@ public class CompanyDetailsController {
         alert.setTitle("Resultado del Escaneo");
         alert.setHeaderText("Datos extraídos de la imagen");
         alert.showAndWait();
+        
         System.out.println("Crear nuevo trabajador en empresa " + emp.getNombreEmp());
         agregarPersona(empleadoOCR);
+        
         Empresa empresaTrabajador = AsistenteFirebase.obtenerEmpresaPorNombre(em);
+        
+        // Se crea una carpeta dentro de la carpeta de la empresa correspondiente
         Archivador.CrearCarpeta(em+"\\"+empleadoOCR.getNombre());
         actualizarTabla(empresaTrabajador);
         initTable();
@@ -103,10 +107,9 @@ public class CompanyDetailsController {
     }
 
 
-    /**
-     * Este método se invoca desde MainController al cargar la vista de detalles.
-     * Permite pasar el nombre de la empresa seleccionada para actualizar la interfaz.
-     */
+    // Este método se invoca desde MainController al cargar la vista de la empresa.
+    // Para mostrar los atributos de la empresa en la interfaz
+    
     public void setEmpresa(Empresa empresa) throws InterruptedException {
         if (empresa != null) {
             lblEmpresa.setText("Detalles de la empresa: " + empresa.getNombreEmp());
@@ -168,20 +171,20 @@ public class CompanyDetailsController {
         trabajadores.add(persona);
     }
     public void initTable() throws InterruptedException {
-        // Hacer la tabla editable
+        // Se permite que la tabla sea editable
         workerTableView.setEditable(true);
         String clave = AsistenteFirebase.obtenerClavePorNombre(manager.firebaseDatabase,em);
-        // Configurar columna de nombre para edición
+        // Se Configura la columna de nombre para edición del objeto Persona
         colNombre.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNombre()));
         colNombre.setCellFactory(TextFieldTableCell.forTableColumn());
         colNombre.setOnEditCommit(event -> {
-            Persona empleado = event.getRowValue(); // Obtener el objeto de la fila
-            empleado.setNombre(event.getNewValue()); // Actualizar el nombre con el nuevo valor
+            Persona empleado = event.getRowValue(); // Obtiene el objeto Persona de la fila
+            empleado.setNombre(event.getNewValue()); // Actualiza el nombre con el nuevo valor
             //emp.agregarEmpleado(empleado);
             AsistenteFirebase.actualizarInfo(manager.firebaseDatabase, "empresas", clave, emp);
         });
 
-        // Configurar columna de edad para edición
+        // Se configura columna de edad para edición
         colEdad.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEdad()));
         colEdad.setCellFactory(TextFieldTableCell.forTableColumn());
         colEdad.setOnEditCommit(event -> {
@@ -191,7 +194,7 @@ public class CompanyDetailsController {
             AsistenteFirebase.actualizarInfo(manager.firebaseDatabase, "empresas", clave, emp);
         });
 
-        // Configurar columna de ID 
+        // Se configura columna de ID 
         colId.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getId()));
         colId.setCellFactory(TextFieldTableCell.forTableColumn());
         colId.setOnEditCommit(event -> {
@@ -201,7 +204,7 @@ public class CompanyDetailsController {
             AsistenteFirebase.actualizarInfo(manager.firebaseDatabase, "empresas", clave, emp);
         });
 
-        // Configurar columna de correo para edición
+        // Se configura columna de correo para edición
         colCorreo.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getCorreo()));
         colCorreo.setCellFactory(TextFieldTableCell.forTableColumn());
         colCorreo.setOnEditCommit(event -> {
@@ -211,7 +214,7 @@ public class CompanyDetailsController {
             AsistenteFirebase.actualizarInfo(manager.firebaseDatabase, "empresas", clave, emp);
         });
 
-        // Configurar columna de dirección para edición
+        // Se configura columna de dirección para edición
         colDireccion.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDireccion()));
         colDireccion.setCellFactory(TextFieldTableCell.forTableColumn());
         colDireccion.setOnEditCommit(event -> {
@@ -221,7 +224,7 @@ public class CompanyDetailsController {
             AsistenteFirebase.actualizarInfo(manager.firebaseDatabase, "empresas", clave, emp);
         });
 
-        // Asignar la lista de trabajadores a la tabla
+        // Se asigna la lista de trabajadores a la tabla
         workerTableView.setItems(trabajadores);
     }
 

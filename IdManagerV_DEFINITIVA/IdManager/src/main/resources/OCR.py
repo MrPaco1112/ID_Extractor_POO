@@ -1,9 +1,18 @@
 import os
+import sys
 import cv2
 import numpy as np
 from PIL import Image
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+
+# Se verifica que la ruta al archivo sea proporcionada como argumento
+if len(sys.argv) < 2:
+    print("Proporciona la ruta del archivo de imagen.")
+    sys.exit(1)
+
+# Se obtiene la ruta del archivo de imagen desde los argumentos
+input_path = sys.argv[1]
+
 def remove_white_background(image, threshold=220):
     image_bgr = image.copy()
     image_rgba = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2BGRA)
@@ -73,13 +82,6 @@ def extract_text(pil_image, config=r'--oem 3 --psm 6'):
     return pytesseract.image_to_string(pil_image, config=config).strip()
 
 def main():
-    # Calcula la ruta absoluta de la carpeta donde está OCR.py
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    
-    # Construye la ruta a la imagen ccFondoBlanco.jpg asumiendo que está
-    # en la misma carpeta que OCR.py (carpeta 'resources')
-    input_path = os.path.join(script_dir, "ccFondoBlanco.jpg")
-    
     original_image = cv2.imread(input_path)
     if original_image is None:
         print(f"Error: No se pudo cargar la imagen: {input_path}")

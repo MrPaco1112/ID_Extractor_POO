@@ -7,10 +7,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.mycompany.idmanager.AsistenteFirebase;
 import com.mycompany.idmanager.Carpeta;
 import com.mycompany.idmanager.Empresa;
-import com.mycompany.idmanager.IdManager;
 import com.mycompany.idmanager.Persona;
 import java.io.File;
-import view.CompanyDetailsController;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -52,7 +50,7 @@ public class MainController {
     Empresa empresaSeleccionada = new Empresa();
     @FXML
     public void initialize() {
-        // Cargar imagen del logo (asegúrate de tener logo.png en src/main/resources/view/)
+        // Se carga el logo
         Image logo = new Image(getClass().getResourceAsStream("/view/logo.png"));
         logoImageView.setImage(logo);
         
@@ -66,7 +64,7 @@ public class MainController {
             }
         });
         
-        // Listener para detectar doble clic en la lista
+        // Listener para detectar doble clic en la lista de las empresas
         companyListView.setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) {
                 String selectedNombre = companyListView.getSelectionModel().getSelectedItem();
@@ -90,7 +88,7 @@ public class MainController {
     private void handleCerrarSesion(ActionEvent event) {
         System.out.println("Sesion Finalizada...");
 
-        // Eliminar las credenciales de Google almacenadas
+        // Se eliminan las credenciales de Google almacenadas
         File credentialsDir = new File(System.getProperty("user.home"), "credentials");
         if (credentialsDir.exists()) {
             for (File file : credentialsDir.listFiles()) {

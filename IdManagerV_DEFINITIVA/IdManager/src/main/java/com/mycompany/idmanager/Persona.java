@@ -21,7 +21,8 @@ public class Persona {
         this.correo = correo;
         this.direccion = direccion;
     }
-    // Constructor vacío necesario para Firebase y deserialización
+    
+    // Constructor vacío para Firebase
     public Persona() {
     }
 
@@ -64,7 +65,8 @@ public class Persona {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    //Para que pueda leer el objeto para subir
+    
+    // Para que pueda leer el objeto para subir
     @Override
     public String toString() {
         return "Persona{" +
@@ -75,6 +77,8 @@ public class Persona {
                 ", direccion='" + direccion + '\'' +
                 '}';
     }
+    
+// Metodo para recolectar los datos de la persona al crear la persona    
 public static Persona crearEmpleado(){
         
         Persona persona = new Persona();

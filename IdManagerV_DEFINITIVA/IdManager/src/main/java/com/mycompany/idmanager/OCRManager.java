@@ -25,6 +25,7 @@ import java.io.InputStreamReader;
 
 public class OCRManager {
     private static File foto;
+    
     // Clase para almacenar los datos extraídos
     public static class DatosCedula {
         private String nuip;
@@ -49,70 +50,54 @@ public class OCRManager {
     
     
     
-    public static String leerTextoDesdeImagen() {
-        // 1. Seleccionar archivo con JFileChooser
-        JFileChooser fileChooser = new JFileChooser();
-        FileNameExtensionFilter filter = new FileNameExtensionFilter(
-            "Imágenes", "jpg", "jpeg", "png", "bmp", "gif"
-        );
-        fileChooser.setFileFilter(filter);
-        
-        int resultado = fileChooser.showOpenDialog(null);
-        if (resultado != JFileChooser.APPROVE_OPTION) {
-            return "Operación cancelada";
-        }
-        
-        File imagen = fileChooser.getSelectedFile();
-        foto = imagen;
-        
-        // 2. Copiar la imagen seleccionada a la carpeta resources del proyecto Maven
-        // Ajusta la ruta de destino según la estructura de tu proyecto.
-        File destFile = new File("src/main/resources/ccFondoBlanco.jpg");
-        try {
-            Files.copy(imagen.toPath(), destFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-            System.out.println("Imagen copiada a: " + destFile.getAbsolutePath());
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return "Error al copiar la imagen: " + ex.getMessage();
-        }
-        
-        
-        // 3. Ejecutar el script Python "cc.py" ubicado en la carpeta resources.
-        // Asegúrate de que "python" esté en el PATH o usa la ruta completa al intérprete de Python.
-        try {
-            ProcessBuilder pb = new ProcessBuilder("python", "src/main/resources/OCR.py");
-            // Opcional: establecer el directorio de trabajo al directorio del proyecto.
-            pb.directory(new File(System.getProperty("user.dir")));
-            pb.redirectErrorStream(true);
-            Process process = pb.start();
-            
-            // Leer la salida del script Python.
-            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String line;
-            StringBuilder output = new StringBuilder();
-            while ((line = reader.readLine()) != null) {
-                output.append(line).append("\n");
-            }
-            
-            int exitCode = process.waitFor();
-            System.out.println("El script Python finalizó con código: " + exitCode);
-            return output.toString();
-        } catch (IOException | InterruptedException ex) {
-            ex.printStackTrace();
-            return "Error al ejecutar cc.py: " + ex.getMessage();
-        }
+public static String leerTextoDesdeImagen() {
+    
+    // Se selecciona una imagen con JFileChooser
+    JFileChooser fileChooser = new JFileChooser();
+    FileNameExtensionFilter filter = new FileNameExtensionFilter(
+        "Imágenes", "jpg", "jpeg", "png"
+    );
+    fileChooser.setFileFilter(filter);
 
-
+    int resultado = fileChooser.showOpenDialog(null);
+    if (resultado != JFileChooser.APPROVE_OPTION) {
+        return "Operación cancelada";
     }
 
-    
+    File imagen = fileChooser.getSelectedFile();
+    foto = imagen;  // Guardamos la imagen seleccionada en la variable foto
 
-    // Nuevo método para procesar el texto OCR y extraer datos
+    // Se ejecuta el script Python "OCR.py" pasandole la ruta de la imagen seleccionada
+    try {
+        // Usamos la ruta del archivo seleccionada por el usuario
+        ProcessBuilder pb = new ProcessBuilder("python", "src/main/resources/OCR.py", imagen.getAbsolutePath());
+        pb.directory(new File(System.getProperty("user.dir"))); // Establecer el directorio de trabajo
+        pb.redirectErrorStream(true);
+        Process process = pb.start();
+
+        // Se lee la salida del script Python.
+        BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+        String line;
+        StringBuilder output = new StringBuilder();
+        while ((line = reader.readLine()) != null) {
+            output.append(line).append("\n");
+        }
+
+        int exitCode = process.waitFor();
+        System.out.println("El script Python finalizó con código: " + exitCode);
+        return output.toString();
+    } catch (IOException | InterruptedException ex) {
+        ex.printStackTrace();
+        return "Error al ejecutar OCR.py: " + ex.getMessage();
+    }
+}
+
+    // Método para procesar el texto extraido por el OCR y extraer los datos
     public static DatosCedula extraerDatosCedula(String textoOCR) {
         // Dividimos el texto en líneas
         String[] lineas = textoOCR.split("\n");
 
-        // Variables donde guardaremos cada dato
+        // Se definen las variables donde guardaremos cada dato
         String nuip = "";
         String apellidos = "";
         String nombre = "";
@@ -137,6 +122,5 @@ public class OCRManager {
         // Retornamos el objeto con los datos extraídos
         return new DatosCedula(nuip, fechaNacimiento, nombreCompleto);
     }
-
-    
+  
 }

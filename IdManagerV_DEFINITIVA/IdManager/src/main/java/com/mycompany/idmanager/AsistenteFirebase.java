@@ -1,5 +1,5 @@
 //Aca se inicializa firebase y
-//Acá van los metodos para CRUD
+//van los metodos para CRUD
  
 package com.mycompany.idmanager;
 
@@ -24,18 +24,18 @@ import java.util.logging.Logger;
 
 public class AsistenteFirebase {
     public static FirebaseDatabase firebaseDatabase;
-// Agregado por Angel
+    // Agregado por Angel
         
-    //Inicializa la conexión a Firebase RTD (Real Time Database).
+    // Se Inicializa la conexión a Firebase RTD (Real Time Database).
     public static void initRTD() {
         try {
             // Lee el archivo de credenciales 
-            FileInputStream serviceAccount = new FileInputStream("src/main/resources/firebase2_clave.json");
+            FileInputStream serviceAccount = new FileInputStream("src/main/resources/firebase-service.json");
             
 	    //URL de la base de datos
             FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                .setDatabaseUrl("https://idmanager-4ded8-default-rtdb.firebaseio.com/")
+                .setDatabaseUrl("https://idmanager-1c643-default-rtdb.firebaseio.com")
                 .build();
                 
             FirebaseApp.initializeApp(options);
@@ -223,10 +223,12 @@ public class AsistenteFirebase {
                 System.out.println("Error al obtener la información: " + databaseError.getMessage());
             }
         });
-        latch.await(); // Esperamos a que se complete el callback
+        latch.await(); // Se espera a que se complete el proceso
         return empresa[0]; // Retornamos la persona obtenida
         
     }
+    
+    
     public static String obtenerClavePorNombre(FirebaseDatabase firebaseDatabase, String nombreEmpresa) throws InterruptedException {
     DatabaseReference ref = firebaseDatabase.getReference("empresas");
     final String[] claveEncontrada = {null};
@@ -260,7 +262,9 @@ public class AsistenteFirebase {
         }
     return claveEncontrada[0]; // Retornar la clave encontrada
     }
+    
     public static List<Empresa> listaEmpresas = new ArrayList<>();
+    
     public static void bajarListaFireBase(){
         DatabaseReference ref = firebaseDatabase.getReference("empresas");
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -282,6 +286,7 @@ public class AsistenteFirebase {
             }
         });
     }
+    
     public static Empresa obtenerEmpresaPorNombre(String nombreBuscado) {
         return listaEmpresas.stream().filter(empresa -> empresa.getNombreEmp().equalsIgnoreCase(nombreBuscado)).findFirst().orElse(null);
     }

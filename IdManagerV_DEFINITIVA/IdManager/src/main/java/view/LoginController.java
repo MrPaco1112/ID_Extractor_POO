@@ -22,21 +22,20 @@ public class LoginController {
     @FXML
     private ImageView logoImageView;
     
-    // campos de correo y contraseña
     @FXML
     private TextField mail;
     @FXML
     private PasswordField password;
     
     @FXML
-    private Button btnLogin; // Asegúrate de que este botón esté definido en el FXML con fx:id="btnLogin"
+    private Button btnLogin;       // fx:id="btnLogin"
     @FXML
-    private Button btnLoginGoogle; // Asegúrate de que este botón esté definido en el FXML con fx:id="btnLogin"
+    private Button btnLoginGoogle; // fx:id="btnLoginGoogle"
 
     @FXML
     public void initialize() {
-        // Cargar la imagen del logo.
-        // Asegúrate de que "logo.png" esté en src/main/resources/view/
+
+        // Se carga el icono del logo
         Image logo = new Image(getClass().getResourceAsStream("/view/logo.png"));
         logoImageView.setImage(logo);
     }

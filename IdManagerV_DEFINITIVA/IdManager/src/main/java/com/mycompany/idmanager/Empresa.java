@@ -1,5 +1,3 @@
-
-
 package com.mycompany.idmanager;
 
 import java.awt.GridLayout;
@@ -10,7 +8,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 
-
 public class Empresa {
     private String nombreEmp;
     private String eps;
@@ -18,7 +15,6 @@ public class Empresa {
     private String arl;
     private Boolean archivada;
     private ArrayList<Persona> empleados = new ArrayList<>();
-
     
     // Constructor
     public Empresa(String nombreEmp, String eps, String caja, String arl, boolean archivada, ArrayList<Persona> empleados) {
@@ -29,7 +25,8 @@ public class Empresa {
         this.archivada = false;
         this.empleados = (empleados != null) ? empleados : new ArrayList<>();
     }
-    // Constructor vacío necesario para Firebase y deserialización
+    
+    // Constructor vacío para Firebase 
     public Empresa() {
     }
 
@@ -82,7 +79,8 @@ public class Empresa {
     public void setArray(ArrayList<Persona> empleados){
         this.empleados = (empleados != null) ? empleados : new ArrayList<>();
     }
-    //Para que pueda leer el objeto para subir
+    
+    //Para que se pueda leer el objeto para subir
     @Override
     public String toString() {
         return "Empresa{" +
@@ -93,6 +91,8 @@ public class Empresa {
                 ", Estado de archivamiento='" + archivada + '\'' +
                 '}';
     }
+    
+// Metodo para recolectar los datos de la empresa al crear la empresa
     public static Empresa crearEmpresa(){
         
         Empresa empresa = new Empresa();

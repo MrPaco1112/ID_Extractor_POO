@@ -64,13 +64,17 @@ Se testearon distintos logos con el fin de tener el mayor contraste en tema oscu
 ![image](https://github.com/user-attachments/assets/bae0ee63-4d97-48a2-ad5d-4c05af9cfdfb)
 
 ![image](https://github.com/user-attachments/assets/b3d6fde3-08a7-4fef-8884-cfa71d86334b)
+
 ---
 ---
-# Diagrama de clases
+
+# Diagrama de clases inicial
 
 ![Diagrama de clases (1)](https://github.com/user-attachments/assets/89396852-b111-4f92-ab93-1c839ed69f48)
+
 ---
 ---
+
 # Criterios de eleccion
  
 Criterios de elección del proyecto:
@@ -126,6 +130,7 @@ Formas:
 
 ---
 ---
+
 # Paso a Paso instalacion
 
 https://drive.google.com/drive/folders/1nmum3sRmDNa3wkcc8pE1dRI-mNJXz1uN?usp=sharing

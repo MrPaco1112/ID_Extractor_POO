@@ -255,7 +255,7 @@ Se realizo de esta manera ya que el caso de uso es para oficinas de recursos hum
 ### Se pasa a escala de grises y se convierten a blanco un rango determinado de grises
 ![5 ccBlancoyNegro](https://github.com/user-attachments/assets/d78ceff1-198c-4376-8ba4-e574b8b58b05)
 
-### Finalmente se recorta cada espacio con los datos que se desean extraer
+### Finalmente se recorta cada espacio con los datos que se desean extraer y se pasa cada imagen individual a Tesseract para extraer el texto
 Dado que todas las cedulas tienen la misma proporción, estos datos siempre estaran ubicados en el mismo lugar
 
 ![ccID](https://github.com/user-attachments/assets/6213247a-50c6-4d0a-989e-d8b45895d87d)

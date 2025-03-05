@@ -1,6 +1,6 @@
 # ID Manager
 ![image](https://github.com/user-attachments/assets/eeb6c74c-0973-4c45-bed9-9053b46655bf)
-Automatiza y simplifica
+
 
 # Diseño  
 ## Paleta de colores:

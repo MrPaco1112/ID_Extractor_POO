@@ -111,6 +111,7 @@ Descargar el archivo ZIP del proyecto desde NetBeans.
 Descomprimir el archivo y ubicar la carpeta en una ubicación de preferencia.
 
 2. Descarga del Instalador de Tesseract
+
 Descargar el instalador de Tesseract desde Google Drive.
 
 3. Instalación de Tesseract
